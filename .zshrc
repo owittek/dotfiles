@@ -9,6 +9,7 @@ MAILCHECK=0
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/oli/.oh-my-zsh"
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 # export NEOVIM_BIN="/opt/homebrew/bin/nvim"
 # export NEOVIDE_FRAME="none"
 
@@ -119,6 +120,7 @@ alias bu='brew uninstall'
 alias 7x='7z x $1'
 alias lg='lazygit'
 alias dotc='/opt/homebrew/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+alias nv='neovide --frame=buttonless'
 
 autoload -Uz compinit
 compinit
@@ -130,6 +132,8 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/Users/oli/.deno/bin:$PATH"
+export GPGKEY="05CF2413634FB03227E5E82CA77C112DFE95BD68"
+export GPG_TTY=$(tty)
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 export NVM_DIR="$HOME/.nvm"
@@ -143,3 +147,5 @@ source <(ng completion script)
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+source /Users/oli/.docker/init-zsh.sh || true # Added by Docker Desktop
