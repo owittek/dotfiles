@@ -1,1 +1,1 @@
-return { "rust_analyzer" }
+return { "rust_analyzer", "denols", "tsserver" }

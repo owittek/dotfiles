@@ -140,6 +140,11 @@ export NVM_DIR="$HOME/.nvm"
 # [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
 # [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 
+# https://stackoverflow.com/a/29403520
+bindkey "^U" backward-kill-line
+bindkey "^X\\x7f" backward-kill-line
+bindkey "^X^_" redo
+
 # Load Angular CLI autocompletion.
 source <(ng completion script)
 
@@ -149,3 +154,9 @@ source <(ng completion script)
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 source /Users/oli/.docker/init-zsh.sh || true # Added by Docker Desktop
+
+PATH="/Users/oli/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/Users/oli/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/Users/oli/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/Users/oli/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/Users/oli/perl5"; export PERL_MM_OPT;

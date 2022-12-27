@@ -1,3 +1,3 @@
 return {
-  ensure_installed = { "rust_analyzer" },
+  ensure_installed = { "rust_analyzer", "denols", "tsserver" },
 }
