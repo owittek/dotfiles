@@ -1,5 +1,7 @@
 return {
-  ["ThePrimeagen/harpoon"] = {},
+  ["ThePrimeagen/harpoon"] = {
+    config = function() require "user.plugins.harpoon" end
+  },
   ["simrat39/rust-tools.nvim"] = {
     after = "mason-lspconfig.nvim",
     config = function() require "user.plugins.rust-tools" end
@@ -20,4 +22,7 @@ return {
     module = "lsp-inlayhints",
     config = function() require "user.plugins.lsp-inlayhints" end
   },
+  ["aserowy/tmux.nvim"] = {
+    config = function() require "user.plugins.tmux" end
+  }
 }
