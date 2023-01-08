@@ -1,0 +1,3 @@
+return {
+  require("tmux").setup {}
+}

@@ -1,3 +1,3 @@
 return {
-  ensure_installed = { "codelldb" }
+  ensure_installed = { "codelldb", "python" }
 }

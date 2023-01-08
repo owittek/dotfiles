@@ -15,5 +15,9 @@ return {
     ["<C-t>"] = { function() ui.nav_file(2) end, desc = "Go to file 2" },
     ["<C-n>"] = { function() ui.nav_file(3) end, desc = "Go to file 3" },
     ["<C-s>"] = { function() ui.nav_file(4) end, desc = "Go to file 4" },
+    ["<leader>th"] = false,
+    ["<leader>tv"] = false,
+    ["<leader>t-"] = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", desc = "Horizontal Terminal" },
+    ["<leader>t|"] = { "<cmd>ToggleTerm size=10 direction=vertical<cr>", desc = "Veritcal Terminal" },
   }
 }
