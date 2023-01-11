@@ -112,15 +112,23 @@ alias network='networksetup -listallhardwareports'
 alias checksum='shasum'
 alias ssdcheck='smartctl -a disk0'
 alias speedtest='speedtest --secure'
+
 alias b='brew'
 alias bi='brew info'
 alias bs='brew search'
 alias bb='brew install'
 alias bu='brew uninstall'
+
 alias 7x='7z x $1'
 alias lg='lazygit'
 alias dotc='/opt/homebrew/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias nv='neovide --frame=buttonless'
+
+alias ls='lsd'
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
 
 autoload -Uz compinit
 compinit
@@ -128,7 +136,6 @@ zstyle ':completion:*' menu select
 autoload -Uz promptinit
 promptinit
 
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/Users/oli/.deno/bin:$PATH"
@@ -137,26 +144,16 @@ export GPG_TTY=$(tty)
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 export NVM_DIR="$HOME/.nvm"
-# [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
-# [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 
 # https://stackoverflow.com/a/29403520
 bindkey "^U" backward-kill-line
 bindkey "^X\\x7f" backward-kill-line
 bindkey "^X^_" redo
 
-# Load Angular CLI autocompletion.
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /Users/oli/.docker/init-zsh.sh || true # Added by Docker Desktop
 source <(ng completion script)
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-source /Users/oli/.docker/init-zsh.sh || true # Added by Docker Desktop
-
-PATH="/Users/oli/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/Users/oli/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/Users/oli/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/Users/oli/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/Users/oli/perl5"; export PERL_MM_OPT;
