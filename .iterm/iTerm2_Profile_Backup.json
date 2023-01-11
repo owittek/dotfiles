@@ -1,11 +1,5 @@
 {
-  "Ansi 5 Color" : {
-    "Red Component" : 0.752197265625,
-    "Color Space" : "sRGB",
-    "Blue Component" : 0.74494361877441406,
-    "Alpha Component" : 1,
-    "Green Component" : 0.24931684136390686
-  },
+  "Thin Strokes" : 4,
   "Working Directory" : "\/Users\/oli",
   "Prompt Before Closing 2" : false,
   "Selected Text Color" : {
@@ -32,7 +26,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.86199951171875
   },
-  "Right Option Key Sends" : 0,
+  "Right Option Key Sends" : 2,
   "Character Encoding" : 4,
   "Selection Color" : {
     "Red Component" : 0.70196080207824707,
@@ -70,7 +64,10 @@
     "Alpha Component" : 0.25,
     "Green Component" : 0.9268307089805603
   },
+  "Right Option Key Changeable" : false,
   "BM Growl" : true,
+  "Open Password Manager Automatically" : false,
+  "Icon" : 1,
   "Ansi 3 Color" : {
     "Red Component" : 0.78058648109436035,
     "Color Space" : "sRGB",
@@ -78,10 +75,8 @@
     "Alpha Component" : 1,
     "Green Component" : 0.76959484815597534
   },
-  "Open Password Manager Automatically" : false,
-  "Icon" : 1,
-  "Use Non-ASCII Font" : false,
   "Shortcut" : "T",
+  "Use Non-ASCII Font" : false,
   "Link Color" : {
     "Red Component" : 0.19802422821521759,
     "Color Space" : "sRGB",
@@ -98,6 +93,7 @@
     "Green Component" : 1
   },
   "Unlimited Scrollback" : false,
+  "Allow modifyOtherKeys" : false,
   "Custom Command" : "No",
   "Keyboard Map" : {
     "0xf728-0x80000" : {
@@ -469,8 +465,8 @@
     "Green Component" : 0.098039217293262482
   },
   "Blur" : true,
-  "Vertical Spacing" : 1,
   "Normal Font" : "JetBrainsMonoNerdFontCo-Regular 14",
+  "Vertical Spacing" : 1,
   "Ansi 7 Color" : {
     "Red Component" : 0.7810397744178772,
     "Color Space" : "sRGB",
@@ -482,7 +478,7 @@
   "Command" : "login -fpql oli \/bin\/zsh",
   "Terminal Type" : "xterm-256color",
   "Horizontal Spacing" : 1,
-  "Option Key Sends" : 0,
+  "Option Key Sends" : 2,
   "Only The Default BG Color Uses Transparency" : true,
   "Minimum Contrast" : 0,
   "Ansi 15 Color" : {
@@ -522,7 +518,13 @@
   "Show Timestamps" : 0,
   "Unicode Normalization" : 0,
   "Visual Bell" : true,
-  "ASCII Ligatures" : true,
   "Custom Directory" : "No",
-  "Thin Strokes" : 4
+  "Ansi 5 Color" : {
+    "Red Component" : 0.752197265625,
+    "Color Space" : "sRGB",
+    "Blue Component" : 0.74494361877441406,
+    "Alpha Component" : 1,
+    "Green Component" : 0.24931684136390686
+  },
+  "ASCII Ligatures" : false
 }
