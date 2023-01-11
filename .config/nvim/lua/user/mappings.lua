@@ -18,6 +18,6 @@ return {
     ["<leader>th"] = false,
     ["<leader>tv"] = false,
     ["<leader>t-"] = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", desc = "Horizontal Terminal" },
-    ["<leader>t|"] = { "<cmd>ToggleTerm size=10 direction=vertical<cr>", desc = "Veritcal Terminal" },
+    ["<leader>t|"] = { "<cmd>ToggleTerm size=10 direction=vertical<cr>", desc = "Vertical Terminal" },
   }
 }
