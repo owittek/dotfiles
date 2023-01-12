@@ -130,13 +130,6 @@ alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
 
-autoload -Uz compinit
-compinit
-zstyle ':completion:*' menu select
-autoload -Uz promptinit
-promptinit
-
-
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/Users/oli/.deno/bin:$PATH"
 export GPGKEY="05CF2413634FB03227E5E82CA77C112DFE95BD68"
@@ -153,6 +146,11 @@ bindkey "^X^_" redo
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /Users/oli/.docker/init-zsh.sh || true # Added by Docker Desktop
 source <(ng completion script)
+
+autoload -Uz compinit && compinit
+zstyle ':completion:*' menu select
+autoload -Uz promptinit && promptinit
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
