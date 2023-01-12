@@ -78,7 +78,7 @@ bindkey "^X\\x7f" backward-kill-line
 bindkey "^X^_" redo
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.docker/init-zsh.sh || true
+source $HOME/docker/init-zsh.sh || true
 source <(ng completion script)
 
 autoload -Uz compinit && compinit
