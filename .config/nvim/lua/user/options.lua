@@ -10,6 +10,10 @@ return {
     neovide_cursor_vfx_mode = "railgun"
   },
   opt = {
-    guifont = "JetBrainsMono Nerd Font:h13"
+    guifont = "JetBrainsMono NF:h13",
+    list = true,
+    listchars = { tab = "│→", extends = "⟩", precedes = "⟨", trail = "·", nbsp = "␣" },
+    wrap = true,
+    linebreak = true,
   }
 }
