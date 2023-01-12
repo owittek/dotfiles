@@ -1,1 +1,3 @@
-require("lsp-inlayhints").setup()
+return {
+  require("lsp-inlayhints").setup {}
+}
