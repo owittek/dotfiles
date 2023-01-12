@@ -3,6 +3,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 MAILCHECK=0
+BREW_DIR='/opt/homebrew'
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -55,7 +56,7 @@ alias bu='brew uninstall'
 
 alias 7x='7z x $1'
 alias lg='lazygit'
-alias dotc='/opt/homebrew/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+alias dotc='$BREW_DIR/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias nv='neovide --frame=buttonless'
 
 alias ls='lsd'
@@ -64,7 +65,7 @@ alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
 
-export PATH="/opt/homebrew/bin:$PATH"
+export PATH="$BREW_DIR/bin:$PATH"
 export PATH="$HOME/.deno/bin:$PATH"
 export GPGKEY="05CF2413634FB03227E5E82CA77C112DFE95BD68"
 export GPG_TTY=$(tty)
@@ -77,8 +78,8 @@ bindkey "^U" backward-kill-line
 bindkey "^X\\x7f" backward-kill-line
 bindkey "^X^_" redo
 
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $HOME/docker/init-zsh.sh || true
+source $BREW_DIR/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.docker/init-zsh.sh || true
 source <(ng completion script)
 
 autoload -Uz compinit && compinit
