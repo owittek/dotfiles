@@ -1,6 +1,7 @@
 return {
   g = {
-    python3_host_prog = "/opt/homebrew/bin/python3",
+    loaded_perl_provider = 0,
+    python3_host_prog = "/opt/homebrew/bin/python3.10",
     neovide_scroll_animation_length = 0,
     neovide_hide_mouse_when_typing = true,
     neovide_refresh_rate = 60,
