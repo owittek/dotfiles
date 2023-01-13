@@ -68,7 +68,7 @@ alias sudoedit='function _sudoedit(){sudo -e "$1";};_sudoedit'
 
 alias 7x='7z x $1'
 alias lg='lazygit'
-alias dotc='$BREW_DIR/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+alias dotc='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias nv='neovide --frame=buttonless'
 
 alias ls='lsd'
