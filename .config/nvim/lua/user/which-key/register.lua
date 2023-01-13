@@ -1,8 +1,8 @@
 return {
   n = {
     ["<leader>"] = {
-      ["x"] = { "+Trouble" }
+      ["x"] = { "+Trouble" },
+      ["a"] = { "+Harpoon" },
     },
   }
 }
-
