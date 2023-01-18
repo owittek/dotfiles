@@ -31,9 +31,6 @@ ZSH_THEME='powerlevel10k/powerlevel10k'
 # Uncomment the following line to automatically update without prompting.
 DISABLE_UPDATE_PROMPT="true"
 
-# Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
-
 # Uncomment the following line to display red dots whilst waiting for completion.
 # Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
 # See https://github.com/ohmyzsh/ohmyzsh/issues/5765
@@ -51,6 +48,9 @@ plugins=(sudo nvm zsh-syntax-highlighting fzf ng zsh-interactive-cd tmux colored
 zstyle ':completion:*' menu select
 zstyle ':omz:plugins:nvm' lazy yes
 zstyle ':omz:plugins:nvm' lazy-cmd eslint prettier typescript
+
+source $HOME/.docker/init-zsh.sh || true
+source $ZSH/oh-my-zsh.sh
 
 ########## ALIASES ##########
 alias b='brew'
@@ -84,9 +84,6 @@ bindkey "^X^_" redo
 
 autoload -Uz compinit && compinit
 autoload -Uz promptinit && promptinit
-
-source $HOME/.docker/init-zsh.sh || true
-source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
