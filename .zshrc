@@ -8,18 +8,19 @@ export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 export GPGKEY="05CF2413634FB03227E5E82CA77C112DFE95BD68"
 export GPG_TTY=$(tty)
 
-export JAVA_HOME=$(/usr/libexec/java_home)
-export NVM_DIR="$HOME/.nvm"
 export FZF_BASE=$(command -v fzf)
 export EDITOR="nvim"
 export SUDO_EDITOR="nvim"
 
+export JAVA_HOME=$(/usr/libexec/java_home)
+export PNPM_HOME="$HOME/Library/pnpm"
+
 export PATH="$BREW_DIR/bin:$PATH"
 export PATH="$HOME/.deno/bin:$PATH"
+export PATH="$PNPM_HOME:$PATH"
 
 MAILCHECK=0
 BREW_DIR=$(brew --prefix)
-NVM_HOMEBREW=$(brew --prefix nvm)
 ZSH_TMUX_ITERM2="true"
 ZSH_TMUX_FIXTERM_WITH_256COLOR="true"
 
@@ -43,11 +44,9 @@ COMPLETION_WAITING_DOTS="true"
 
 HIST_STAMPS="dd.mm.yyyy"
 
-plugins=(sudo nvm zsh-syntax-highlighting fzf ng zsh-interactive-cd tmux colored-man-pages)
+plugins=(sudo zsh-syntax-highlighting fzf ng zsh-interactive-cd tmux colored-man-pages)
 
 zstyle ':completion:*' menu select
-zstyle ':omz:plugins:nvm' lazy yes
-zstyle ':omz:plugins:nvm' lazy-cmd eslint prettier typescript
 
 source $HOME/.docker/init-zsh.sh || true
 source $ZSH/oh-my-zsh.sh
@@ -70,12 +69,13 @@ alias 7x='7z x $1'
 alias lg='lazygit'
 alias dotc='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias nv='neovide --frame=buttonless'
+alias np='pnpm'
 
-alias ls='lsd'
-alias l='ls -l'
-alias la='ls -a'
-alias lla='ls -la'
-alias lt='ls --tree'
+alias l='lsd'
+alias ll='lsd -l'
+alias la='l -a'
+alias lla='l -la'
+alias lt='l --tree'
 
 # https://stackoverflow.com/a/29403520
 bindkey "^U" backward-kill-line
