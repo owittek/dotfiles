@@ -8,6 +8,7 @@ export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 export GPGKEY="05CF2413634FB03227E5E82CA77C112DFE95BD68"
 export GPG_TTY=$(tty)
 
+export LANG=en_US.UTF-8
 export FZF_BASE=$(command -v fzf)
 export EDITOR="nvim"
 export SUDO_EDITOR="nvim"
