@@ -2,7 +2,7 @@ return {
   "sigmasd/deno-nvim", "jose-elias-alvarez/typescript.nvim",
   "simrat39/rust-tools.nvim", {
     "williamboman/mason-lspconfig.nvim",
-    opts = { ensure_installed = { "denols", "rust_analyzer", "tsserver" } }
+    opts = { ensure_installed = { "denols", "rust_analyzer", "tsserver", "pyright", "ruff_lsp" } }
   }, {
     "jay-babu/mason-nvim-dap.nvim",
     opts = { ensure_installed = { "codelldb", "debugpy" } }
