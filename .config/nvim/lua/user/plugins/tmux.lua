@@ -1,3 +1,1 @@
-return {
-  require("tmux").setup {}
-}
+return { "aserowy/tmux.nvim" }

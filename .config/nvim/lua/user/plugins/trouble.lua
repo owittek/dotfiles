@@ -1,3 +1,1 @@
-return {
-  require("trouble").setup {}
-}
+return { "folke/trouble.nvim" }
