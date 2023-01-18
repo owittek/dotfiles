@@ -58,6 +58,7 @@ alias bi='brew info'
 alias bs='brew search'
 alias bb='brew install'
 alias bu='brew uninstall'
+alias bl='brew list'
 
 alias df='df -h'
 alias network='networksetup -listallhardwareports'
@@ -74,9 +75,9 @@ alias np='pnpm'
 
 alias l='lsd'
 alias ll='lsd -l'
-alias la='l -a'
-alias lla='l -la'
-alias lt='l --tree'
+alias la='lsd -a'
+alias lla='lsd -la'
+alias lt='lsd --tree'
 
 # https://stackoverflow.com/a/29403520
 bindkey "^U" backward-kill-line
