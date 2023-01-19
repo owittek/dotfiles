@@ -1,1 +1,1 @@
-return {"nvim-treesitter/nvim-treesitter", auto_install = true}
+return { "nvim-treesitter/nvim-treesitter", auto_install = true }

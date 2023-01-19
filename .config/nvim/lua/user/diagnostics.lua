@@ -1,3 +1,3 @@
 return {
-    virtual_text = false,
+  virtual_text = false,
 }

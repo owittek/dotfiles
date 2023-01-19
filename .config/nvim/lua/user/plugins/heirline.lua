@@ -1,16 +1,16 @@
 return {
   "rebelot/heirline.nvim",
   opts = function(_, opts)
-    opts.statusline = { -- statusline
+    opts.statusline = {
       hl = { fg = "fg", bg = "bg" },
       astronvim.status.component.mode {
-        mode_text = { padding = { left = 1, right = 1 } }
+        mode_text = { padding = { left = 1, right = 1 } },
       },
       astronvim.status.component.git_branch(),
       astronvim.status.component.file_info {
         filetype = {},
         filename = false,
-        file_modified = false
+        file_modified = false,
       },
       astronvim.status.component.git_diff(),
       astronvim.status.component.diagnostics(),
@@ -19,8 +19,8 @@ return {
       astronvim.status.component.fill(),
       astronvim.status.component.lsp(),
       astronvim.status.component.treesitter(),
-      astronvim.status.component.nav()
+      astronvim.status.component.nav(),
     }
     return opts
-  end
+  end,
 }

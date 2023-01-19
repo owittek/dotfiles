@@ -4,97 +4,97 @@ return {
     ["[b"] = false,
     ["<S-l>"] = { function() astronvim.nav_buf(vim.v.count > 0 and vim.v.count or 1) end, desc = "Next buffer" },
     ["<S-h>"] = { function() astronvim.nav_buf(-(vim.v.count > 0 and vim.v.count or 1)) end, desc = "Previous buffer" },
-    ["<leader>x"] = {name = "+Trouble"},
-    ["<leader>xx"] = {"<cmd>TroubleToggle<cr>", desc = "Toggle Trouble"},
+    ["<leader>x"] = { name = "+Trouble" },
+    ["<leader>xx"] = { "<cmd>TroubleToggle<cr>", desc = "Toggle Trouble" },
     ["<leader>xw"] = {
       "<cmd>TroubleToggle workspace_diagnostics<cr>",
-      desc = "Workspace Diagnostics"
+      desc = "Workspace Diagnostics",
     },
     ["<leader>xd"] = {
       "<cmd>TroubleToggle document_diagnostics<cr>",
-      desc = "Document Diagnostics"
+      desc = "Document Diagnostics",
     },
     ["<leader>xl"] = {
       "<cmd>TroubleToggle loclist<cr>",
-      desc = "Location List"
+      desc = "Location List",
     },
-    ["<leader>xq"] = {"<cmd>TroubleToggle quickfix<cr>", desc = "Quickfix"},
+    ["<leader>xq"] = { "<cmd>TroubleToggle quickfix<cr>", desc = "Quickfix" },
     ["gR"] = {
       "<cmd>TroubleToggle lsp_references<cr>",
-      desc = "LSP References"
+      desc = "LSP References",
     },
     ["<leader>th"] = false,
     ["<leader>tv"] = false,
     ["<leader>t-"] = {
       "<cmd>ToggleTerm size=10 direction=horizontal<cr>",
-      desc = "Horizontal Terminal"
+      desc = "Horizontal Terminal",
     },
     ["<leader>t|"] = {
       "<cmd>ToggleTerm size=10 direction=vertical<cr>",
-      desc = "Vertical Terminal"
+      desc = "Vertical Terminal",
     },
-    ["<leader>r"] = {name = "+Crates"},
-    ['<leader>rt'] = {
+    ["<leader>r"] = { name = "+Crates" },
+    ["<leader>rt"] = {
       function() require("crates").toggle() end,
-      desc = "Toggle Crates"
+      desc = "Toggle Crates",
     },
-    ['<leader>rr'] = {
+    ["<leader>rr"] = {
       function() require("crates").reload() end,
-      desc = "Reload Crates"
+      desc = "Reload Crates",
     },
-    ['<leader>rv'] = {
+    ["<leader>rv"] = {
       function() require("crates").show_versions_popup() end,
-      desc = "Show Versions"
+      desc = "Show Versions",
     },
-    ['<leader>rf'] = {
+    ["<leader>rf"] = {
       function() require("crates").show_features_popup() end,
-      desc = "Show Features"
+      desc = "Show Features",
     },
-    ['<leader>rd'] = {
+    ["<leader>rd"] = {
       function() require("crates").show_dependencies_popup() end,
-      desc = "Show Deps"
+      desc = "Show Deps",
     },
-    ['<leader>ru'] = {
+    ["<leader>ru"] = {
       function() require("crates").update_crate() end,
-      desc = "Update Crate"
+      desc = "Update Crate",
     },
-    ['<leader>ra'] = {
+    ["<leader>ra"] = {
       function() require("crates").update_all_crates() end,
-      desc = "Update All"
+      desc = "Update All",
     },
-    ['<leader>rU'] = {
+    ["<leader>rU"] = {
       function() require("crates").upgrade_crate() end,
-      desc = "Upgrade Crate"
+      desc = "Upgrade Crate",
     },
-    ['<leader>rA'] = {
+    ["<leader>rA"] = {
       function() require("crates").upgrade_all_crates() end,
-      desc = "Upgrade All"
+      desc = "Upgrade All",
     },
-    ['<leader>rH'] = {
+    ["<leader>rH"] = {
       function() require("crates").open_homepage() end,
-      desc = "Open HP"
+      desc = "Open HP",
     },
-    ['<leader>rR'] = {
+    ["<leader>rR"] = {
       function() require("crates").open_repository() end,
-      desc = "Open Repo"
+      desc = "Open Repo",
     },
-    ['<leader>rD'] = {
+    ["<leader>rD"] = {
       function() require("crates").open_documentation() end,
-      desc = "Open Docs"
+      desc = "Open Docs",
     },
-    ['<leader>rC'] = {
+    ["<leader>rC"] = {
       function() require("crates").open_crates_io() end,
-      desc = "Open crates.io"
-    }
-},
-  v = {
-    ['<leader>ru'] = {
-      function() require("crates").update_crates() end,
-      desc = "Update Crates"
+      desc = "Open crates.io",
     },
-    ['<leader>rU'] = {
+  },
+  v = {
+    ["<leader>ru"] = {
+      function() require("crates").update_crates() end,
+      desc = "Update Crates",
+    },
+    ["<leader>rU"] = {
       function() require("crates").upgrade_crates() end,
-      desc = "Upgrade Crates"
-    }
-  }
+      desc = "Upgrade Crates",
+    },
+  },
 }
