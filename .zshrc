@@ -3,17 +3,21 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export ZSH="$HOME/.oh-my-zsh"
-export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
+export ZSH_COMPDUMP="$ZSH/cache/.zcompdump-$HOST"
 
 export GPGKEY="05CF2413634FB03227E5E82CA77C112DFE95BD68"
-export GPG_TTY=$(tty)
+export GPG_TTY="$(tty)"
 
-export LANG=en_US.UTF-8
-export FZF_BASE=$(command -v fzf)
+export FZF_BASE="$(command -v fzf)"
+export FZF_DEFAULT_COMMAND="fd --type f --strip-cwd-prefix"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+export LANG="en_US.UTF-8"
+
 export EDITOR="nvim"
-export SUDO_EDITOR="nvim"
+export SUDO_EDITOR="$EDITOR"
 
-export JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME="$(/usr/libexec/java_home)"
 export PNPM_HOME="$HOME/Library/pnpm"
 
 export PATH="$BREW_DIR/bin:$PATH"
@@ -21,11 +25,11 @@ export PATH="$HOME/.deno/bin:$PATH"
 export PATH="$PNPM_HOME:$PATH"
 
 MAILCHECK=0
-BREW_DIR=$(brew --prefix)
+BREW_DIR="$(brew --prefix)"
 ZSH_TMUX_ITERM2="true"
 ZSH_TMUX_FIXTERM_WITH_256COLOR="true"
 
-ZSH_THEME='powerlevel10k/powerlevel10k'
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -52,6 +56,8 @@ zstyle ':completion:*' menu select
 source $HOME/.docker/init-zsh.sh || true
 source $ZSH/oh-my-zsh.sh
 
+eval "$(zoxide init zsh)"
+
 ########## ALIASES ##########
 alias b='brew'
 alias bi='brew info'
@@ -67,11 +73,14 @@ alias ssdcheck='smartctl -a disk0'
 alias speedtest='speedtest --secure'
 alias sudoedit='function _sudoedit(){sudo -e "$1";};_sudoedit'
 
-alias 7x='7z x $1'
+alias 7x='7z x'
 alias lg='lazygit'
 alias dotc='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias nv='neovide --frame=buttonless'
 alias np='pnpm'
+alias src='source $HOME/.zshrc'
+alias cm='chezmoi'
+alias fz="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 
 alias l='lsd'
 alias ll='lsd -l'
