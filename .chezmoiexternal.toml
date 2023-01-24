@@ -23,8 +23,7 @@
     exact = true
     stripComponents = 1
     refreshPeriod = "672h"
-# [".config/nvim"]
-#     type = "git-repo"
-#     url = "https://github.com/AstroNvim/AstroNvim.git"
-#     refreshPeriod = "672h"
-#     exclude = ["lua/user_example/**"]
+[".config/nvim"]
+    type = "git-repo"
+    url = "https://github.com/AstroNvim/AstroNvim.git"
+    exclude = ["lua/user_example/**"]
