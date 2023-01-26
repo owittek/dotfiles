@@ -66,7 +66,11 @@ plugins=(sudo zsh-syntax-highlighting fzf ng zsh-interactive-cd tmux colored-man
 
 zstyle ':completion:*' menu select
 
+{{ if eq .chezmoi.os "darwin" -}}
+
 source $HOME/.docker/init-zsh.sh || true
+{{ end -}}
+
 source $ZSH/oh-my-zsh.sh
 
 eval "$(zoxide init zsh)"
