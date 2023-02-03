@@ -25,4 +25,3 @@
 [".config/nvim"]
     type = "git-repo"
     url = "https://github.com/AstroNvim/AstroNvim.git"
-    exclude = ["lua/user_example/**"]

@@ -12,13 +12,4 @@ setup_omz() {
   /bin/sh "$INSTALL_SCRIPT" --keep-zshrc
 }
 
-setup_tmux() {
-  if command_exists tmux; then
-    tmux source "$HOME/.tmux.conf"
-  else
-    echo "tmux is missing.\nInstall tmux & run 'tmux source ~/.tmux.conf' manually"
-  fi
-}
-
 setup_omz
-setup_tmux
