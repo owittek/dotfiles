@@ -31,29 +31,24 @@ export SUDO_EDITOR="$EDITOR"
 
 {{ if eq .chezmoi.os "darwin" -}}
 
-if ! cmd_exists brew; then
-    echo "Install homebrew!"
-    echo '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
+BREW_DIR="$(brew --prefix)"
+export PATH="$BREW_DIR/bin:$PATH"
+export PATH="$BREW_DIR/opt/python/libexec/bin:$PATH"
+
+export MAMBA_EXE="$BREW_DIR/bin/micromamba";
+export MAMBA_ROOT_PREFIX="$HOME/.micromamba";
+
+__mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__mamba_setup"
 else
-    BREW_DIR="$(brew --prefix)"
-    export PATH="$BREW_DIR/bin:$PATH"
-    export PATH="$BREW_DIR/opt/python/libexec/bin:$PATH"
-
-    export MAMBA_EXE="$BREW_DIR/bin/micromamba";
-    export MAMBA_ROOT_PREFIX="$HOME/.micromamba";
-
-    __mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
-    if [ $? -eq 0 ]; then
-        eval "$__mamba_setup"
+    if [ -f "$HOME/.micromamba/etc/profile.d/micromamba.sh" ]; then
+        . "$HOME/.micromamba/etc/profile.d/micromamba.sh"
     else
-        if [ -f "$HOME/.micromamba/etc/profile.d/micromamba.sh" ]; then
-            . "$HOME/.micromamba/etc/profile.d/micromamba.sh"
-        else
-            export  PATH="$HOME/.micromamba/bin:$PATH"  # extra space after export prevents interference from conda init
-        fi
+        export  PATH="$HOME/.micromamba/bin:$PATH"  # extra space after export prevents interference from conda init
     fi
-    unset __mamba_setup
 fi
+unset __mamba_setup
 
 export PNPM_HOME="$HOME/Library/pnpm"
 
@@ -94,7 +89,7 @@ COMPLETION_WAITING_DOTS="true"
 
 HIST_STAMPS="dd.mm.yyyy"
 
-plugins=(sudo zsh-syntax-highlighting fzf ng zsh-interactive-cd tmux colored-man-pages)
+plugins=(sudo zsh-syntax-highlighting fzf ng zsh-interactive-cd tmux colored-man-pages git)
 
 zstyle ':completion:*' menu select
 
