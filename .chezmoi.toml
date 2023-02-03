@@ -1,2 +1,4 @@
 [edit]
     command = "nvim"
+[diff]
+    exclude = ["scripts"]
