@@ -24,8 +24,20 @@ return {
       },
     },
     config = function(plugin, opts)
-      plugin.default_config(opts)
-      require("mason-null-ls").setup_handlers({
+      local mason_null_ls = require("mason-null-ls")
+
+      mason_null_ls.setup(opts)
+      mason_null_ls.setup_handlers({
+        prettier = function()
+          require("null-ls").register(require("null-ls").builtins.formatting.prettier.with({
+            condition = function(utils)
+              return utils.root_has_file("package.json")
+                or utils.root_has_file(".prettierrc")
+                or utils.root_has_file(".prettierrc.json")
+                or utils.root_has_file(".prettierrc.js")
+            end,
+          }))
+        end,
         prettierd = function()
           require("null-ls").register(require("null-ls").builtins.formatting.prettierd.with({
             condition = function(utils)
