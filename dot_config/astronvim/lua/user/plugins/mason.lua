@@ -23,13 +23,14 @@ return {
         "rustfmt",
       },
     },
-    config = function(plugin, opts)
+    config = function(opts)
+      local null_ls = require("null-ls")
       local mason_null_ls = require("mason-null-ls")
 
       mason_null_ls.setup(opts)
       mason_null_ls.setup_handlers({
         prettier = function()
-          require("null-ls").register(require("null-ls").builtins.formatting.prettier.with({
+          null_ls.register(null_ls.builtins.formatting.prettier.with({
             condition = function(utils)
               return utils.root_has_file("package.json")
                 or utils.root_has_file(".prettierrc")
@@ -39,7 +40,7 @@ return {
           }))
         end,
         prettierd = function()
-          require("null-ls").register(require("null-ls").builtins.formatting.prettierd.with({
+          null_ls.register(null_ls.builtins.formatting.prettierd.with({
             condition = function(utils)
               return utils.root_has_file("package.json")
                 or utils.root_has_file(".prettierrc")
@@ -49,7 +50,7 @@ return {
           }))
         end,
         eslint_d = function()
-          require("null-ls").register(require("null-ls").builtins.diagnostics.eslint_d.with({
+          null_ls.register(null_ls.builtins.diagnostics.eslint_d.with({
             condition = function(utils)
               return utils.root_has_file("package.json")
                 or utils.root_has_file(".eslintrc.json")

@@ -5,6 +5,7 @@ command_exists() {
 }
 
 setup_omz() {
+  [ -d "$HOME/.oh-my-zsh" ] && exit
   INSTALL_SCRIPT="$HOME/.oh-my-zsh/tools/install.sh"
   if [ ! -x "$INSTALL_SCRIPT" ]; then
     chmod u+x "$INSTALL_SCRIPT"
