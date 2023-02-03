@@ -1,12 +1,10 @@
 #!/bin/sh
 
-command_exists() {
-  command -v "$@" >/dev/null 2>&1
-}
-
 setup_omz() {
-  [ -d "$HOME/.oh-my-zsh" ] && exit
-  INSTALL_SCRIPT="$HOME/.oh-my-zsh/tools/install.sh"
+  OMZ_DIR = "$HOME/.oh-my-zsh"
+  [ -d "$OMZ_DIR" ] && exit
+
+  INSTALL_SCRIPT="$OMZ_DIR/tools/install.sh"
   if [ ! -x "$INSTALL_SCRIPT" ]; then
     chmod u+x "$INSTALL_SCRIPT"
   fi
