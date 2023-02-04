@@ -14,6 +14,7 @@
   url = "https://github.com/romkatv/powerlevel10k/archive/master.tar.gz"
   exact = true
   stripComponents = 1
+  exclude = ["**/*.png", "**/*.md"]
 [".tmux/plugins/tpm"]
   type = "archive"
   refreshPeriod = "168h"

@@ -4,7 +4,7 @@ return {
   "simrat39/rust-tools.nvim",
   {
     "williamboman/mason-lspconfig.nvim",
-    opts = { ensure_installed = { "denols", "rust_analyzer", "tsserver", "pyright", "taplo" } },
+    opts = { ensure_installed = { "denols", "rust_analyzer", "tsserver", "pyright", "taplo", "sumneko_lua" } },
   },
   {
     "jay-babu/mason-nvim-dap.nvim",
@@ -33,9 +33,9 @@ return {
           null_ls.register(null_ls.builtins.formatting.prettier.with({
             condition = function(utils)
               return utils.root_has_file("package.json")
-                or utils.root_has_file(".prettierrc")
-                or utils.root_has_file(".prettierrc.json")
-                or utils.root_has_file(".prettierrc.js")
+                  or utils.root_has_file(".prettierrc")
+                  or utils.root_has_file(".prettierrc.json")
+                  or utils.root_has_file(".prettierrc.js")
             end,
           }))
         end,
@@ -43,9 +43,9 @@ return {
           null_ls.register(null_ls.builtins.formatting.prettierd.with({
             condition = function(utils)
               return utils.root_has_file("package.json")
-                or utils.root_has_file(".prettierrc")
-                or utils.root_has_file(".prettierrc.json")
-                or utils.root_has_file(".prettierrc.js")
+                  or utils.root_has_file(".prettierrc")
+                  or utils.root_has_file(".prettierrc.json")
+                  or utils.root_has_file(".prettierrc.js")
             end,
           }))
         end,
@@ -53,8 +53,8 @@ return {
           null_ls.register(null_ls.builtins.diagnostics.eslint_d.with({
             condition = function(utils)
               return utils.root_has_file("package.json")
-                or utils.root_has_file(".eslintrc.json")
-                or utils.root_has_file(".eslintrc.js")
+                  or utils.root_has_file(".eslintrc.json")
+                  or utils.root_has_file(".eslintrc.js")
             end,
           }))
         end,
