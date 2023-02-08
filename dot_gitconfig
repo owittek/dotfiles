@@ -1,0 +1,16 @@
+[user]
+	name = Olivier Wittek
+	email = 57495944+owittek@users.noreply.github.com
+	username = owittek
+	signingkey = 05CF2413634FB03227E5E82CA77C112DFE95BD68
+
+[init]
+	defaultBranch = main
+
+[core]
+	editor = nvim
+
+[commit]
+	gpgsign = true
+[pull]
+	rebase = true
