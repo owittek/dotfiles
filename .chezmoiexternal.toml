@@ -16,11 +16,8 @@
   stripComponents = 1
   exclude = ["**/*.png", "**/*.md"]
 [".tmux/plugins/tpm"]
-  type = "archive"
-  refreshPeriod = "168h"
-  url = "https://github.com/tmux-plugins/tpm/archive/master.tar.gz"
-  exact = true
-  stripComponents = 1
+  type = "git-repo"
+  url = "https://github.com/tmux-plugins/tpm.git"
 [".config/nvim"]
   type = "git-repo"
   url = "https://github.com/AstroNvim/AstroNvim.git"
