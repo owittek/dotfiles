@@ -11,7 +11,7 @@ MAILCHECK=0
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_COMPDUMP="$HOME/.oh-my-zsh/cache/.zcompdump-$HOST"
 
-{{ if eq .chezmoi.hostname "selBook" -}}
+{{ if (or (eq .chezmoi.hostname "selBook") (eq .chezmoi.hostname "SelPC")) -}}
 
 export GPGKEY="05CF2413634FB03227E5E82CA77C112DFE95BD68"
 export GPG_TTY="$(tty)"
@@ -36,7 +36,18 @@ export PATH="$BREW_DIR/bin:$PATH"
 export PATH="$BREW_DIR/opt/python/libexec/bin:$PATH"
 
 export MAMBA_EXE="$BREW_DIR/bin/micromamba";
-export MAMBA_ROOT_PREFIX="$HOME/.micromamba";
+export PNPM_HOME="$HOME/Library/pnpm"
+
+ZSH_TMUX_ITERM2="true"
+{{ else if eq .chezmoi.os "linux" -}}
+
+export MAMBA_EXE="$HOME/.local/bin/micromamba"
+export PNPM_HOME="$HOME/.local/share/pnpm"
+export PATH="/opt/cuda/bin:$PATH"
+
+export PATH="$HOME/.local/bin:$PATH"
+
+{{ end -}}
 
 __mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
 if [ $? -eq 0 ]; then
@@ -45,29 +56,17 @@ else
     if [ -f "$HOME/.micromamba/etc/profile.d/micromamba.sh" ]; then
         . "$HOME/.micromamba/etc/profile.d/micromamba.sh"
     else
-        export  PATH="$HOME/.micromamba/bin:$PATH"  # extra space after export prevents interference from conda init
+        export  PATH="$HOME/.micromamba/bin:$PATH"
     fi
 fi
 unset __mamba_setup
 
-export PNPM_HOME="$HOME/Library/pnpm"
+export MAMBA_ROOT_PREFIX="$HOME/.micromamba"
 
-ZSH_TMUX_ITERM2="true"
-{{ else if eq .chezmoi.os "linux" -}}
-
-export PNPM_HOME="$HOME/.local/share/pnpm"
-export PATH="$HOME/.local/bin:$PATH"
-{{ end -}}
+export PATH="$PNPM_HOME:$PATH"
+export PATH="$HOME/.deno/bin:$PATH"
 
 ZSH_TMUX_FIXTERM_WITH_256COLOR="true"
-
-if cmd_exists deno; then
-    export PATH="$HOME/.deno/bin:$PATH"
-fi
-
-if cmd_exists pnpm; then
-    export PATH="$PNPM_HOME:$PATH"
-fi
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
