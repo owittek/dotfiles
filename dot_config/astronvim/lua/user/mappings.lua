@@ -2,8 +2,8 @@ return {
   n = {
     ["]b"] = false,
     ["[b"] = false,
-    ["<S-l>"] = { function() astronvim.nav_buf(vim.v.count > 0 and vim.v.count or 1) end, desc = "Next buffer" },
-    ["<S-h>"] = { function() astronvim.nav_buf(-(vim.v.count > 0 and vim.v.count or 1)) end, desc = "Previous buffer" },
+    ["<S-l>"] = { function() require("core.utils.buffer").nav(1) end, desc = "Next buffer" },
+    ["<S-h>"] = { function() require("core.utils.buffer").nav( -1) end, desc = "Previous buffer" },
     ["<leader>x"] = { name = "+Trouble" },
     ["<leader>xx"] = { "<cmd>TroubleToggle<cr>", desc = "Toggle Trouble" },
     ["<leader>xw"] = {

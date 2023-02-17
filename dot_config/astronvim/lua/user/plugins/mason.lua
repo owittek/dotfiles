@@ -4,7 +4,7 @@ return {
   "simrat39/rust-tools.nvim",
   {
     "williamboman/mason-lspconfig.nvim",
-    opts = { ensure_installed = { "denols", "rust_analyzer", "tsserver", "pyright", "taplo", "sumneko_lua" } },
+    opts = { ensure_installed = { "denols", "rust_analyzer", "tsserver", "pyright", "taplo", "lua_ls" } },
   },
   {
     "jay-babu/mason-nvim-dap.nvim",
