@@ -9,6 +9,7 @@ return {
       mason = true,
       neotree = true,
       which_key = true,
+      lsp_trouble = true,
     },
   },
 }
