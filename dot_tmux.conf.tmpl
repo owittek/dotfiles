@@ -60,12 +60,6 @@ set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @continuum-restore 'on'
-{{ if eq .chezmoi.os "darwin" -}}
-
-set -g @continuum-boot 'on'
-set -g @continuum-boot-options 'iterm'
-
-{{ end -}}
 
 set -g @plugin 'dracula/tmux'
 set -g @dracula-plugins "git time"
