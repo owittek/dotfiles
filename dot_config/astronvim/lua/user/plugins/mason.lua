@@ -19,6 +19,7 @@ return {
         "marksman",
         "jsonls",
         "yamlls",
+        "html",
       },
     },
   },
@@ -37,7 +38,6 @@ return {
         "black",
         "stylua",
         "rustfmt",
-        "gitlint",
       },
     },
     config = function(_, opts)
@@ -46,6 +46,7 @@ return {
 
       mason_null_ls.setup(opts)
       mason_null_ls.setup_handlers {
+        taplo = function() end,
         prettierd = function()
           null_ls.register(null_ls.builtins.formatting.prettierd.with {
             condition = function(utils)
