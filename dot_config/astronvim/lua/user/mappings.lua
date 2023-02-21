@@ -1,9 +1,10 @@
 return {
   n = {
+    ["<C-s>"] = { "<cmd>MarkdownPreviewToggle<cr>", desc = "Toggle Markdown Preview" },
     ["]b"] = false,
     ["[b"] = false,
     ["<S-l>"] = { function() require("core.utils.buffer").nav(1) end, desc = "Next buffer" },
-    ["<S-h>"] = { function() require("core.utils.buffer").nav( -1) end, desc = "Previous buffer" },
+    ["<S-h>"] = { function() require("core.utils.buffer").nav(-1) end, desc = "Previous buffer" },
     ["<leader>x"] = { name = "+Trouble" },
     ["<leader>xx"] = { "<cmd>TroubleToggle<cr>", desc = "Toggle Trouble" },
     ["<leader>xw"] = {
