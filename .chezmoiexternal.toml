@@ -22,4 +22,4 @@
   type = "git-repo"
   url = "https://github.com/AstroNvim/AstroNvim.git"
 [".config/nvim".clone]
-  args = ["-b", "v3"]
+  args = ["-b", "v3", "--depth", "1"]
