@@ -1,7 +1,7 @@
 #!/bin/sh
 
 cmd_exists() {
-  command -v "$@" >/dev/null 2>&1
+  command -v "$@" > /dev/null 2>&1
 }
 
 echo "attempting to install missing packages..."
@@ -23,10 +23,10 @@ fi
 TO_INSTALL=( "git" "fd" "fzf" "lsd" "pnpm" "tmux" "zoxide" "bat" "micromamba" )
 
 # install neovim with nvim binary
-! cmd_exists nvim && eval "$INSTALL neovim"
+! cmd_exists nvim && eval "$INSTALL neovim > /dev/null 2>&1"
 
 for PKG in "${TO_INSTALL[@]}"; do
-  ! cmd_exists "$PKG" && eval "$INSTALL $PKG"
+  ! cmd_exists "$PKG" && eval "$INSTALL $PKG > /dev/null 2>&1"
 done
 
 exit 0
