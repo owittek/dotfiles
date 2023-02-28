@@ -1,0 +1,3 @@
+return {
+  "mortepau/codicons.nvim",
+}

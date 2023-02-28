@@ -1,11 +1,16 @@
 return {
-	{
-		"zbirenbaum/copilot.lua",
-		-- init = function()
-		--   table.insert(astronvim.file_plugins, "copilot.vim")
-		-- end,
-		event = "InsertEnter",
-		dependencies = "zbirenbaum/copilot-cmp",
-	},
-	"zbirenbaum/copilot-cmp",
+  {
+    "zbirenbaum/copilot.lua",
+    event = "InsertEnter",
+    dependencies = "zbirenbaum/copilot-cmp",
+    config = function() require("copilot").setup {} end,
+  },
+  {
+    "zbirenbaum/copilot-cmp",
+    config = function() require("copilot_cmp").setup() end,
+    opts = {
+      suggestion = { enabled = false },
+      panel = { enabled = false },
+    },
+  },
 }
