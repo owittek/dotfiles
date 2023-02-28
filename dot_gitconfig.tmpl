@@ -1,0 +1,20 @@
+[user]
+  name = Olivier Wittek
+  username = owittek
+{{- if eq .chezmoi.hostname "rseapsfd02" }}
+  email = owittek@avaya.com
+{{- else }}
+  email = 57495944+owittek@users.noreply.github.com
+  signingkey = 05CF2413634FB03227E5E82CA77C112DFE95BD68
+{{- end }}
+
+[init]
+  defaultBranch = main
+
+[core]
+  editor = nvim
+
+[commit]
+  gpgsign = true
+[pull]
+  rebase = true
