@@ -1,6 +1,7 @@
 return {
   n = {
-    ["<C-s>"] = { "<cmd>MarkdownPreviewToggle<cr>", desc = "Toggle Markdown Preview" },
+    ["<C-d>"] = { "<C-d>zz" },
+    ["<C-u>"] = { "<C-u>zz" },
     ["]b"] = false,
     ["[b"] = false,
     ["<S-l>"] = { function() require("astronvim.utils.buffer").nav(1) end, desc = "Next buffer" },
