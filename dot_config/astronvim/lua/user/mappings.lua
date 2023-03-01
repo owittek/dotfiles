@@ -6,7 +6,7 @@ return {
     ["[b"] = false,
     ["<S-l>"] = { function() require("astronvim.utils.buffer").nav(1) end, desc = "Next buffer" },
     ["<S-h>"] = { function() require("astronvim.utils.buffer").nav(-1) end, desc = "Previous buffer" },
-    ["<leader>x"] = { name = "+Trouble" },
+    ["<leader>x"] = { name = "+ Trouble" },
     ["<leader>xx"] = { "<cmd>TroubleToggle<cr>", desc = "Toggle Trouble" },
     ["<leader>xw"] = {
       "<cmd>TroubleToggle workspace_diagnostics<cr>",
@@ -35,7 +35,7 @@ return {
       "<cmd>ToggleTerm size=10 direction=vertical<cr>",
       desc = "Vertical Terminal",
     },
-    ["<leader>r"] = { name = "+Crates" },
+    ["<leader>r"] = { name = "+ Crates" },
     ["<leader>rt"] = {
       function() require("crates").toggle() end,
       desc = "Toggle Crates",
