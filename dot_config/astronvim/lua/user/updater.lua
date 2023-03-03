@@ -1,1 +1,1 @@
-return { channel = "nightly", branch = "v3" }
+return { channel = "nightly" }
