@@ -8,10 +8,12 @@ zstyle ':z4h:' auto-update      'no'
 zstyle ':z4h:' auto-update-days '28'
 
 # Keyboard type: 'mac' or 'pc'.
-zstyle ':z4h:bindkey' keyboard  'mac'
+zstyle ':z4h:bindkey' keyboard {{ if eq .chezmoi.os "darwin" }} 'mac' {{ else }} 'pc' {{ end }}
 
+{{ if eq .chezmoi.os "darwin" -}}
 # Start tmux if not already in tmux.
 zstyle ':z4h:' start-tmux command tmux -u new -A -D -t main
+{{ end -}}
 
 # Whether to move prompt to the bottom when zsh starts and on Ctrl+L.
 zstyle ':z4h:' prompt-at-bottom 'no'
@@ -84,8 +86,10 @@ export SUDO_EDITOR="$EDITOR"
 
 # Extend PATH.
 {{ if eq .chezmoi.os "darwin" -}}
+
 path=($HOMEBREW_PREFIX/bin $HOMEBREW_PREFIX/opt/python/libexec/bin $HOMEBREW_PREFIX/opt/ccache/libexec $PNPM_HOME $HOME/.deno/bin $path)
 {{ else -}}
+
 path=($PNPM_HOME $HOME/.deno/bin /opt/cuda/bin $HOME/.local/bin $path)
 
 {{ end -}}
@@ -168,8 +172,6 @@ fi
 
 alias 7x='7z x'
 alias lg='lazygit'
-alias dotc='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
-alias nv='neovide --frame=buttonless'
 alias np='pnpm'
 alias src='exec zsh'
 alias cm='chezmoi'
@@ -177,11 +179,13 @@ alias edit='chezmoi edit --apply'
 alias mm='micromamba'
 alias fz="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 
-alias l='lsd'
-alias ll='lsd -l'
-alias la='lsd -a'
-alias lla='lsd -la'
-alias lt='lsd --tree'
+if cmd_exists lsd; then
+    alias l='lsd'
+    alias ll='lsd -l'
+    alias la='lsd -a'
+    alias lla='lsd -la'
+    alias lt='lsd --tree'
+fi
 
 # Add flags to existing aliases.
 alias ls="${aliases[ls]:-ls} -A"
