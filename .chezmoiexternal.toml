@@ -5,4 +5,4 @@
   type = "git-repo"
   url = "https://github.com/AstroNvim/AstroNvim.git"
 [".config/nvim".clone]
-  args = ["-b", "nightly", "--depth", "1"]
+  args = ["--depth", "1"]
