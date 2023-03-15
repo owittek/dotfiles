@@ -2,6 +2,7 @@ return {
   n = {
     ["<C-d>"] = { "<C-d>zz" },
     ["<C-u>"] = { "<C-u>zz" },
+    ["<C-f>"] = { "<C-u>" },
     ["]b"] = false,
     ["[b"] = false,
     ["<S-l>"] = { function() require("astronvim.utils.buffer").nav(1) end, desc = "Next buffer" },
