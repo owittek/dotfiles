@@ -15,7 +15,6 @@ return {
       Copilot = "",
       Snippet = "",
     }
-    vim.api.nvim_set_hl(0, "CmpItemKindCopilot", { fg = "#0F2637" })
     return opts
   end,
 }
