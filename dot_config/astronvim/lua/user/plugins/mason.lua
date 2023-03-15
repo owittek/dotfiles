@@ -1,11 +1,6 @@
 return {
   "sigmasd/deno-nvim",
   "jose-elias-alvarez/typescript.nvim",
-  "simrat39/rust-tools.nvim",
-  { -- Temporary fix to a breaking change
-    "williamboman/mason.nvim",
-    commit = "a07a5c644784bdba8bbfd83e78f14c261bb7efe6",
-  },
   {
     "williamboman/mason-lspconfig.nvim",
     opts = {
