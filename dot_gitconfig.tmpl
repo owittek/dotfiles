@@ -14,7 +14,11 @@
 [core]
   editor = nvim
 
+{{- if ne .chezmoi.hostname "rseapsfd02" }}
+
 [commit]
   gpgsign = true
+{{- end }}
+
 [pull]
   rebase = true
