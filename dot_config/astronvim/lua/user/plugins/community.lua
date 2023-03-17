@@ -4,6 +4,7 @@ return {
   { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.motion.mini-move" },
+  { import = "astrocommunity.editing-support.nvim-ts-rainbow2" },
   {
     "catppuccin",
     opts = {
