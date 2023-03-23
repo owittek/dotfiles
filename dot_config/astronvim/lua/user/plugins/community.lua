@@ -5,13 +5,14 @@ return {
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.motion.mini-move" },
   { import = "astrocommunity.editing-support.nvim-ts-rainbow2" },
+  { import = "astrocommunity.motion.leap-nvim" },
   {
     "catppuccin",
     opts = {
       integrations = {
         ts_rainbow2 = true,
         lsp_trouble = true,
-        -- leap = true,
+        leap = true,
       },
     },
   },
