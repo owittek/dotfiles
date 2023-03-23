@@ -87,7 +87,7 @@ export SUDO_EDITOR="$EDITOR"
 # Extend PATH.
 {{ if eq .chezmoi.os "darwin" -}}
 
-path=($HOMEBREW_PREFIX/bin $HOMEBREW_PREFIX/opt/python/libexec/bin $HOMEBREW_PREFIX/opt/ccache/libexec $PNPM_HOME $HOME/.deno/bin $path)
+path=($HOMEBREW_PREFIX/bin $HOMEBREW_PREFIX/opt/python/libexec/bin $HOMEBREW_PREFIX/opt/ccache/libexec $PNPM_HOME $HOME/.deno/bin $HOMEBREW_PREFIX/opt/llvm/bin $path)
 {{ else -}}
 
 path=($PNPM_HOME $HOME/.deno/bin /opt/cuda/bin $HOME/.local/bin $path)
@@ -170,9 +170,13 @@ if cmd_exists zoxide; then
     alias cd='z'
 fi
 
+if cmd_exists pnpm; then
+    alias np='pnpm'
+    alias npm='pnpm'
+fi
+
 alias 7x='7z x'
 alias lg='lazygit'
-alias np='pnpm'
 alias src='exec zsh'
 alias cm='chezmoi'
 alias edit='chezmoi edit --apply'
