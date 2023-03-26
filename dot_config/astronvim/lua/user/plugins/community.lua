@@ -6,9 +6,10 @@ return {
   { import = "astrocommunity.motion.mini-move" },
   { import = "astrocommunity.editing-support.nvim-ts-rainbow2" },
   { import = "astrocommunity.motion.leap-nvim" },
-  { import = "astrocommunity/diagnostics/trouble-nvim" },
-  { import = "astrocommunity/editing-support/todo-comments-nvim" },
-  { import = "astrocommunity/bars-and-lines/heirline-mode-text-statusline" },
+  { import = "astrocommunity.diagnostics.trouble-nvim" },
+  { import = "astrocommunity.editing-support.todo-comments-nvim" },
+  { import = "astrocommunity.bars-and-lines.heirline-mode-text-statusline" },
+  { import = "astrocommunity.motion.vim-matchup" },
   {
     "catppuccin",
     opts = {
