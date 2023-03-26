@@ -10,6 +10,7 @@ return {
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   { import = "astrocommunity.bars-and-lines.heirline-mode-text-statusline" },
   { import = "astrocommunity.motion.vim-matchup" },
+  { import = "astrocommunity.code-runner.overseer-nvim" },
   {
     "catppuccin",
     opts = {
