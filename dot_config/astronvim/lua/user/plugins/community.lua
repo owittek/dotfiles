@@ -11,6 +11,7 @@ return {
   { import = "astrocommunity.bars-and-lines.heirline-mode-text-statusline" },
   { import = "astrocommunity.motion.vim-matchup" },
   { import = "astrocommunity.code-runner.overseer-nvim" },
+  { import = "astrocommunity.editing-support.zen-mode-nvim" },
   {
     "catppuccin",
     opts = {
