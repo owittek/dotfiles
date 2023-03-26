@@ -1,4 +1,3 @@
-
 # Documentation: https://github.com/romkatv/zsh4humans/blob/v5/README.md.
 
 # Periodic auto-update on Zsh startup: 'ask' or 'no'.
@@ -87,7 +86,7 @@ export SUDO_EDITOR="$EDITOR"
 # Extend PATH.
 {{ if eq .chezmoi.os "darwin" -}}
 
-path=($HOMEBREW_PREFIX/bin $HOMEBREW_PREFIX/opt/python/libexec/bin $HOMEBREW_PREFIX/opt/ccache/libexec $PNPM_HOME $HOME/.deno/bin $HOMEBREW_PREFIX/opt/llvm/bin $path)
+path=($HOMEBREW_PREFIX/opt/ccache/libexec $HOMEBREW_PREFIX/opt/llvm/bin $HOMEBREW_PREFIX/opt/python/libexec/bin $PNPM_HOME $HOME/.deno/bin $HOMEBREW_PREFIX/bin $path)
 {{ else -}}
 
 path=($PNPM_HOME $HOME/.deno/bin /opt/cuda/bin $HOME/.local/bin $path)
@@ -172,6 +171,7 @@ fi
 
 if cmd_exists pnpm; then
     alias np='pnpm'
+    [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
 fi
 
 alias 7x='7z x'
