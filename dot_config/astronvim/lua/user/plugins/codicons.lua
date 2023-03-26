@@ -1,3 +1,0 @@
-return {
-  "mortepau/codicons.nvim",
-}
