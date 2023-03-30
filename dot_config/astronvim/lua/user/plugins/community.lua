@@ -17,15 +17,14 @@ return {
     "catppuccin",
     opts = {
       integrations = {
-        gitsigns = true,
-        treesitter = true,
-        markdown = true,
+        indent_blankline = { enabled = true, colored_indent_levels = false },
         ts_rainbow2 = true,
         lsp_trouble = true,
+        treesitter = true,
         gitsigns = true,
+        markdown = true,
         overseer = true,
         leap = true,
-        indent_blankline = { enabled = true, colored_indent_levels = false },
       },
     },
   },
