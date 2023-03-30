@@ -12,6 +12,7 @@ return {
   { import = "astrocommunity.motion.vim-matchup" },
   { import = "astrocommunity.code-runner.overseer-nvim" },
   { import = "astrocommunity.editing-support.zen-mode-nvim" },
+  { import = "astrocommunity.git.git-blame" },
   {
     "catppuccin",
     opts = {
@@ -21,6 +22,7 @@ return {
         markdown = true,
         ts_rainbow2 = true,
         lsp_trouble = true,
+        gitsigns = true,
         leap = true,
         indent_blankline = { enabled = true, colored_indent_levels = false },
       },
