@@ -4,6 +4,7 @@ return {
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   { import = "astrocommunity.editing-support.nvim-ts-rainbow2" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.note-taking.obsidian-nvim" },
   { import = "astrocommunity.code-runner.overseer-nvim" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
   { import = "astrocommunity.colorscheme.catppuccin" },
@@ -25,6 +26,14 @@ return {
         overseer = true,
         leap = true,
       },
+    },
+  },
+  {
+    "epwalsh/obsidian.nvim",
+    opts = {
+      dir = "~/Documents/Obsidian\\ Vault",
+      completion = { nvim_cmp = true },
+      daily_notes = { folder = "daily" },
     },
   },
 }
