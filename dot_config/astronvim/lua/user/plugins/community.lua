@@ -4,6 +4,7 @@ return {
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   { import = "astrocommunity.editing-support.nvim-ts-rainbow2" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.pack.typescript-all-in-one" },
   { import = "astrocommunity.note-taking.obsidian-nvim" },
   { import = "astrocommunity.code-runner.overseer-nvim" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
