@@ -79,6 +79,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 export MAMBA_EXE="$HOME/.local/bin/micromamba"
 export PNPM_HOME="$HOME/.local/share/pnpm"
+export PYENV_ROOT="$HOME/.pyenv"
 
 {{ end -}}
 
@@ -115,6 +116,9 @@ else
     fi
 fi
 unset __mamba_setup
+
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 # Use additional Git repositories pulled in with `z4h install`.
 #
