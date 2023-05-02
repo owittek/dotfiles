@@ -9,10 +9,11 @@ zstyle ':z4h:' auto-update-days '28'
 # Keyboard type: 'mac' or 'pc'.
 zstyle ':z4h:bindkey' keyboard {{ if eq .chezmoi.os "darwin" }} 'mac' {{ else }} 'pc' {{ end }}
 
-{{ if (or (eq .chezmoi.hostname "selBook") (eq .chezmoi.hostname "SelPC")) -}}
 # Start tmux if not already in tmux.
-zstyle ':z4h:' start-tmux command tmux -u new -A -D -t main
-{{ end -}}
+if [[ -z "$IN_TMUX" ]]; then
+    zstyle ':z4h:' start-tmux command tmux -u new -A -D -t main
+    export IN_TMUX=1
+fi
 
 # Whether to move prompt to the bottom when zsh starts and on Ctrl+L.
 zstyle ':z4h:' prompt-at-bottom 'no'
