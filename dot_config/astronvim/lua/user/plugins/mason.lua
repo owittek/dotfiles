@@ -3,8 +3,7 @@ return {
   {
     "williamboman/mason-lspconfig.nvim",
     opts = function(_, opts)
-      if not opts.ensure_installed then opts.ensure_installed = {} end
-      utils.list_insert_unique(opts.ensure_installed, {
+      opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, {
         "pyright",
         "taplo",
         "lua_ls",
@@ -17,17 +16,12 @@ return {
   },
   {
     "jay-babu/mason-nvim-dap.nvim",
-    opts = function(_, opts)
-      if not opts.ensure_installed then opts.ensure_installed = {} end
-      utils.list_insert_unique(opts.ensure_installed, { "python" })
-    end,
+    opts = function(_, opts) opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, { "python" }) end,
   },
   {
     "jay-babu/mason-null-ls.nvim",
     opts = function(_, opts)
-      if not opts.ensure_installed then opts.ensure_installed = {} end
-      utils.list_insert_unique(opts.ensure_installed, {
-        -- "ruff",
+      opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, {
         "selene",
         "black",
         "stylua",
