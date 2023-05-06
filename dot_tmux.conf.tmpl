@@ -12,10 +12,10 @@ bind C-a send-prefix
 
 bind a last-window
 
-bind | split-window -h
+bind | split-window -h -c "#{pane_current_path}"
 unbind %
 
-bind - split-window -v
+bind - split-window -v -c "#{pane_current_path}"
 unbind '"'
 
 unbind Up
