@@ -3,7 +3,7 @@ return {
   { import = "astrocommunity.bars-and-lines.heirline-mode-text-statusline" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   { import = "astrocommunity.editing-support.nvim-ts-rainbow2" },
-  { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.pack.typescript-all-in-one" },
   { import = "astrocommunity.note-taking.obsidian-nvim" },
   { import = "astrocommunity.code-runner.overseer-nvim" },
@@ -35,6 +35,19 @@ return {
       dir = "~/Documents/Obsidian\\ Vault",
       completion = { nvim_cmp = true },
       daily_notes = { folder = "daily" },
+    },
+  },
+  {
+    "zbirenbaum/copilot.lua",
+    opts = {
+      suggestion = {
+        keymap = {
+          accept = "<C-l>",
+          next = "<C-;>",
+          prev = "<C-'>",
+        },
+      },
+      filetypes = { markdown = true },
     },
   },
 }
