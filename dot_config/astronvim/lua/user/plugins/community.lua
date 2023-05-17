@@ -3,12 +3,13 @@ return {
   { import = "astrocommunity.bars-and-lines.heirline-mode-text-statusline" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   { import = "astrocommunity.editing-support.nvim-ts-rainbow2" },
-  { import = "astrocommunity.completion.copilot-lua" },
+  { import = "astrocommunity.editing-support.cutlass-nvim" },
   { import = "astrocommunity.pack.typescript-all-in-one" },
   { import = "astrocommunity.note-taking.obsidian-nvim" },
   { import = "astrocommunity.code-runner.overseer-nvim" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
   { import = "astrocommunity.colorscheme.catppuccin" },
+  { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.git.git-blame-nvim" },
   { import = "astrocommunity.motion.vim-matchup" },
   { import = "astrocommunity.motion.leap-nvim" },
@@ -17,6 +18,8 @@ return {
   {
     "catppuccin",
     opts = {
+      flavour = "mocha",
+      transparent_background = true,
       integrations = {
         indent_blankline = { enabled = true, colored_indent_levels = false },
         lsp_trouble = true,
