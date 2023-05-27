@@ -9,5 +9,6 @@ return {
     linebreak = true,
     spelllang = "en_us",
     spellfile = vim.fn.expand "~/.config/astronvim/spell/en.utf-8.add",
+    showtabline = (vim.t.bufs and #vim.t.bufs > 1) and 2 or 1,
   },
 }
