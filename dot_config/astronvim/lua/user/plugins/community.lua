@@ -15,7 +15,11 @@ return {
   { import = "astrocommunity.motion.vim-matchup" },
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.motion.mini-move" },
+  { import = "astrocommunity.pack.markdown" },
+  { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.yaml" },
+  { import = "astrocommunity.pack.lua" },
   {
     "catppuccin",
     opts = {
