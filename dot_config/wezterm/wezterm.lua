@@ -18,4 +18,11 @@ return {
   },
   window_decorations = "RESIZE",
   audible_bell = "Disabled",
+  keys = {
+    {
+      key = "f",
+      mods = "CTRL|CMD",
+      action = wezterm.action.ToggleFullScreen,
+    },
+  },
 }
