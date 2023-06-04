@@ -10,6 +10,7 @@ return {
   { import = "astrocommunity.diagnostics.trouble-nvim" },
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.completion.copilot-lua" },
+  { import = "astrocommunity.utility.noice-nvim" },
   { import = "astrocommunity.startup.fsplash-nvim" },
   { import = "astrocommunity.git.git-blame-nvim" },
   { import = "astrocommunity.motion.vim-matchup" },
