@@ -1,0 +1,28 @@
+---
+base: lua51
+name: astronvim
+globals:
+  vim:
+    any: true
+  astronvim.install:
+    property: full-write
+  astronvim.supported_configs:
+    property: full-write
+  astronvim.user_opts:
+    any: true
+  astronvim.updater:
+    property: override-fields
+  astronvim.updater.options:
+    property: full-write
+  astronvim.updater.snapshot:
+    property: full-write
+  astronvim.updater.rollback_file:
+    property: full-write
+  astronvim.user_terminals:
+    property: full-write
+  astronvim.lsp:
+    property: full-write
+  astronvim.skip_setup:
+    property: full-write
+  astronvim.default_colorscheme:
+    property: full-write

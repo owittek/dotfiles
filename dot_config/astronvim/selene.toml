@@ -1,0 +1,3 @@
+std = "astronvim"
+[lints]
+multiple_statements = "allow"
