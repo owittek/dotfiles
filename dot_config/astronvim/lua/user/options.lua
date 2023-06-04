@@ -1,5 +1,6 @@
 return {
   g = {
+    resession_enabled = true,
     loaded_perl_provider = 0,
   },
   opt = {
