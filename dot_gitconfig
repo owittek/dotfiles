@@ -1,0 +1,24 @@
+[user]
+  name = Olivier Wittek
+  username = owittek
+
+[init]
+  defaultBranch = main
+
+[core]
+  editor = nvim
+
+[commit]
+  gpgsign = true
+
+[pull]
+  rebase = true
+
+[includeIf "gitdir:~/code/work/"]
+  path = ~/.gitconfig_work
+
+[includeIf "gitdir:~/code/personal/"]
+  path = ~/.gitconfig_personal
+
+[includeIf "gitdir:~/.local/share/chezmoi/"]
+  path = ~/.gitconfig_personal
