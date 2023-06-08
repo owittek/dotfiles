@@ -7,12 +7,29 @@
 
 [core]
   editor = nvim
+  pager = delta
 
 [commit]
   gpgsign = true
 
 [pull]
   rebase = true
+
+[merge]
+  conflictstyle = diff3
+
+[rebase]
+  autoStash = true
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true
+  light = false
+
+[diff]
+  colorMoved = default
 
 [includeIf "gitdir:~/code/work/"]
   path = ~/.gitconfig_work
