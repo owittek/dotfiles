@@ -83,6 +83,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export MAMBA_EXE="$HOME/.local/bin/micromamba"
 export PNPM_HOME="$HOME/.local/share/pnpm"
 export PYENV_ROOT="$HOME/.pyenv"
+export NVM_DIR="$HOME/.config/nvm"
 
 {{ end -}}
 
@@ -128,6 +129,10 @@ unset __mamba_setup
 
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+NVM_BREW="$HOMEBREW_PREFIX/opt/nvm"
+[ -s "$NVM_BREW/nvm.sh" ] && \. "$NVM_BREW/nvm.sh"
+[ -s "$NVM_BREW/etc/bash_completion.d/nvm" ] && \. "$NVM_BREW/etc/bash_completion.d/nvm"
 
 # Use additional Git repositories pulled in with `z4h install`.
 #
