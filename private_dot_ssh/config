@@ -2,8 +2,11 @@ Host *
   ServerAliveInterval 60
   ConnectTimeout 10
   AddKeysToAgent yes
-  EscapeChar `
-  ControlMaster auto
-  ControlPersist 72000
-  ControlPath ~/.ssh/s/%C
-  IdentityFile ~/.ssh/id_ed25519
+
+Host github-work.com
+  HostName github.com
+  IdentityFile ~/.ssh/id_work
+
+Host github.com
+  HostName github.com
+  IdentityFile ~/.ssh/id_personal
