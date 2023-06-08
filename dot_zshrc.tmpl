@@ -62,7 +62,9 @@ z4h init || return
 # MAILCHECK=0
 
 # Export environment variables.
-{{ if (or (eq .chezmoi.hostname "selBook") (eq .chezmoi.hostname "SelPC")) -}}
+{{ if eq .chezmoi.hostname "workBook" -}}
+export GPGKEY="1D9BC77FB64C07B75E16C4EF3D6B4EA58A13F34F"
+{{ else }}
 export GPGKEY="05CF2413634FB03227E5E82CA77C112DFE95BD68"
 {{ end -}}
 
@@ -102,6 +104,11 @@ path=($PNPM_HOME $HOME/.deno/bin /opt/cuda/bin $HOME/.local/bin $path)
 
 # Source additional local files if they exist.
 # z4h source ~/.env.zsh
+
+{{ if eq .chezmoi.hostname "workBook" }}
+z4h source ~/code/work/everdocs/scripts/tools.sh
+
+{{ end -}}
 
 cmd_exists() {
   command -v "$@" >/dev/null 2>&1
