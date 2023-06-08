@@ -62,12 +62,6 @@ z4h init || return
 # MAILCHECK=0
 
 # Export environment variables.
-{{ if eq .chezmoi.hostname "workBook" -}}
-export GPGKEY="1D9BC77FB64C07B75E16C4EF3D6B4EA58A13F34F"
-{{ else }}
-export GPGKEY="05CF2413634FB03227E5E82CA77C112DFE95BD68"
-{{ end -}}
-
 {{ if eq .chezmoi.os "darwin" -}}
 export HOMEBREW_PREFIX="$(brew --prefix)"
 export HOMEBREW_NO_ANALYTICS="1"
