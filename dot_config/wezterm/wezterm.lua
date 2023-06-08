@@ -25,5 +25,4 @@ return {
       action = wezterm.action.ToggleFullScreen,
     },
   },
-  native_macos_fullscreen_mode = true,
 }
