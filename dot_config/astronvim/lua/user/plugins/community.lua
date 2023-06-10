@@ -8,6 +8,7 @@ return {
   { import = "astrocommunity.note-taking.obsidian-nvim" },
   { import = "astrocommunity.code-runner.overseer-nvim" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
+  { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.motion.mini-surround" },

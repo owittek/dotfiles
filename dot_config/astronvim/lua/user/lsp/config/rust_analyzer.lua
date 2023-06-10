@@ -1,18 +1,15 @@
 return {
   settings = {
     ["rust-analyzer"] = {
-      cargo = {
-        loadOutDirsFromCheck = true,
-        features = "all",
-      },
       checkOnSave = {
         command = "clippy",
+        extraArgs = { "--no-deps" },
       },
       procMacro = {
         enable = true,
       },
-      experimental = {
-        procAttrMacros = true,
+      inlayHints = {
+        locationLinks = false,
       },
     },
   },
