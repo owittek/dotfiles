@@ -1,5 +1,6 @@
 local wezterm = require "wezterm"
 return {
+  hyperlink_rules = wezterm.default_hyperlink_rules(),
   font = wezterm.font_with_fallback {
     "JetBrainsMono Nerd Font",
     "Symbols Nerd Font Mono",
