@@ -88,4 +88,65 @@ return {
       filetypes = { markdown = true },
     },
   },
+  {
+    "noice.nvim",
+    opts = {
+      messages = { enabled = true },
+      cmdline = {
+        format = {
+          filter = { pattern = "^:%s*!", icon = "$ ", ft = "sh" },
+          IncRename = {
+            pattern = "^:%s*IncRename%s+",
+            icon = " ",
+            conceal = true,
+          },
+        },
+      },
+      views = {
+        cmdline_popup = {
+          border = { style = "none", padding = { 1, 2 } },
+          win_options = {
+            winblend = 5,
+            winhighlight = {
+              Normal = "NormalFloat",
+              FloatBorder = "NoiceCmdlinePopupBorder",
+              IncSearch = "",
+              Search = "",
+            },
+            cursorline = false,
+          },
+        },
+      },
+      popupmenu = {
+        enabled = true,
+      },
+      routes = {
+        { view = "notify", filter = { event = "msg_showmode" } },
+        { filter = { event = "msg_show", find = "%d+L, %d+B" }, view = "mini" },
+        {
+          view = "cmdline_output",
+          filter = { cmdline = "^:", min_height = 5 },
+          -- BUG: will be fixed after https://github.com/neovim/neovim/issues/21044 gets merged
+        },
+        { filter = { event = "msg_show", kind = "search_count" }, opts = { skip = true } },
+        { filter = { event = "msg_show", find = "; before #" }, opts = { skip = true } },
+        { filter = { event = "msg_show", find = "; after #" }, opts = { skip = true } },
+        { filter = { event = "msg_show", find = " lines, " }, opts = { skip = true } },
+        { filter = { event = "msg_show", find = "go up one level" }, opts = { skip = true } },
+        { filter = { event = "msg_show", find = "yanked" }, opts = { skip = true } },
+        { filter = { find = "No active Snippet" }, opts = { skip = true } },
+        { filter = { find = "waiting for cargo metadata" }, opts = { skip = true } },
+        -- INFO: remove when deprecation warning is fixed
+        { filter = { find = "vim.lsp.util.get_progress_messages is deprecated" }, opts = { skip = true } },
+        { filter = { find = "function 'get_progress_messages'" }, opts = { skip = true } },
+      },
+      presets = {
+        inc_rename = true,
+        bottom_search = false,
+        command_palette = true,
+        long_message_to_split = true,
+        lsp_doc_border = "rounded",
+      },
+    },
+  },
 }
