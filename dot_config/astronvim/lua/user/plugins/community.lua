@@ -17,7 +17,7 @@ return {
   { import = "astrocommunity.motion.nvim-spider" },
   { import = "astrocommunity.motion.vim-matchup" },
   { import = "astrocommunity.utility.noice-nvim" },
-  { import = "astrocommunity.motion.leap-nvim" },
+  { import = "astrocommunity.motion.flit-nvim" },
   { import = "astrocommunity.motion.mini-move" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.python" },
