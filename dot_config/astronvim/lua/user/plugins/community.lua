@@ -1,8 +1,8 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.bars-and-lines.heirline-mode-text-statusline" },
+  { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
-  { import = "astrocommunity.editing-support.nvim-ts-rainbow2" },
   { import = "astrocommunity.editing-support.cutlass-nvim" },
   { import = "astrocommunity.pack.typescript-all-in-one" },
   { import = "astrocommunity.note-taking.obsidian-nvim" },
@@ -32,9 +32,9 @@ return {
       integrations = {
         indent_blankline = { enabled = true, colored_indent_levels = false },
         dap = { enabled = true, enable_ui = true },
+        rainbow_delimiters = true,
         semantic_tokens = true,
         lsp_trouble = true,
-        ts_rainbow2 = true,
         treesitter = true,
         telescope = true,
         which_key = true,
