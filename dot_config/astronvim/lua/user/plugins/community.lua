@@ -68,8 +68,7 @@ return {
   {
     "epwalsh/obsidian.nvim",
     opts = {
-      dir = "~/Documents/Obsidian\\ Vault",
-      completion = { nvim_cmp = true },
+      dir = "~/Documents/obsidian-vault",
       daily_notes = { folder = "daily" },
     },
   },
