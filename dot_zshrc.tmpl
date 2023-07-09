@@ -89,7 +89,7 @@ export BATDIFF_USE_DELTA=true
 # Extend PATH.
 {{ if eq .chezmoi.os "darwin" -}}
 
-path=($HOMEBREW_PREFIX/opt/ccache/libexec $HOMEBREW_PREFIX/opt/python/libexec/bin $PNPM_HOME $HOME/.deno/bin $HOMEBREW_PREFIX/bin $path)
+path=($HOMEBREW_PREFIX/opt/ccache/libexec $HOMEBREW_PREFIX/opt/python/libexec/bin $PNPM_HOME $HOME/.deno/bin $HOMEBREW_PREFIX/bin $HOME/.local/share/bob/nvim-bin $path)
 {{ else -}}
 
 path=($PNPM_HOME $HOME/.deno/bin /opt/cuda/bin $HOME/.local/bin $path)
