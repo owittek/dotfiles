@@ -4,6 +4,7 @@ return {
     loaded_perl_provider = 0,
   },
   opt = {
+    foldcolumn = "0",
     list = true,
     listchars = { tab = "│→", extends = "⟩", precedes = "⟨", trail = "·", nbsp = "␣" },
     wrap = true,
