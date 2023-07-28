@@ -96,8 +96,11 @@ path=($PNPM_HOME $HOME/.deno/bin /opt/cuda/bin $HOME/.local/bin $path)
 
 {{ end -}}
 
+fpath+=~/.zfunc
+
 # Source additional local files if they exist.
 # z4h source ~/.env.zsh
+z4h source ~/.keys
 
 {{ if eq .chezmoi.hostname "workBook" }}
 z4h source ~/code/work/everdocs/scripts/tools.sh
