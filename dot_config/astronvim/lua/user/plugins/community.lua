@@ -3,6 +3,7 @@ return {
   { import = "astrocommunity.bars-and-lines.heirline-mode-text-statusline" },
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
+  { import = "astrocommunity.editing-support.chatgpt-nvim" },
   { import = "astrocommunity.pack.typescript-all-in-one" },
   { import = "astrocommunity.note-taking.obsidian-nvim" },
   { import = "astrocommunity.code-runner.overseer-nvim" },
