@@ -69,6 +69,8 @@ export MAMBA_EXE="$HOMEBREW_PREFIX/bin/micromamba";
 export PNPM_HOME="$HOME/Library/pnpm"
 export MAMBA_ROOT_PREFIX="$HOME/.micromamba"
 export XDG_CONFIG_HOME="$HOME/.config"
+export LDFLAGS="-L$HOMEBREW_PREFIX/opt/llvm/lib"
+export CPPFLAGS="-I$HOMEBREW_PREFIX/opt/llvm/include"
 {{ else -}}
 
 export MAMBA_EXE="$HOME/.local/bin/micromamba"
@@ -83,10 +85,11 @@ export SUDO_EDITOR="$EDITOR"
 export BAT_THEME="Catppuccin-mocha"
 export BATDIFF_USE_DELTA=true
 
+
 # Extend PATH.
 {{ if eq .chezmoi.os "darwin" -}}
 
-path=($HOMEBREW_PREFIX/opt/ccache/libexec $HOMEBREW_PREFIX/opt/python/libexec/bin $PNPM_HOME $HOME/.deno/bin $HOMEBREW_PREFIX/bin $HOME/.local/share/bob/nvim-bin $path)
+path=($HOMEBREW_PREFIX/opt/llvm/bin $HOMEBREW_PREFIX/opt/ccache/libexec $HOMEBREW_PREFIX/opt/python/libexec/bin $PNPM_HOME $HOME/.deno/bin $HOMEBREW_PREFIX/bin $HOME/.local/share/bob/nvim-bin $path)
 {{ else -}}
 
 path=($PNPM_HOME $HOME/.deno/bin /opt/cuda/bin $HOME/.local/bin $path)
