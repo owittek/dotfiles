@@ -11,7 +11,6 @@ return {
   { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.completion.copilot-lua" },
-  { import = "astrocommunity.motion.mini-surround" },
   { import = "astrocommunity.startup.fsplash-nvim" },
   { import = "astrocommunity.git.git-blame-nvim" },
   { import = "astrocommunity.motion.vim-matchup" },
@@ -141,21 +140,6 @@ return {
         command_palette = true,
         long_message_to_split = true,
         lsp_doc_border = "rounded",
-      },
-    },
-  },
-
-  {
-    "echasnovski/mini.surround",
-    opts = {
-      mappings = {
-        add = "sa", -- Add surrounding in Normal and Visual modes
-        delete = "sd", -- Delete surrounding
-        find = "sf", -- Find surrounding (to the right)
-        find_left = "sF", -- Find surrounding (to the left)
-        highlight = "sh", -- Highlight surrounding
-        replace = "sr", -- Replace surrounding
-        update_n_lines = "sn", -- Update `n_lines`
       },
     },
   },
