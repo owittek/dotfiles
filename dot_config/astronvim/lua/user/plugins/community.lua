@@ -134,9 +134,6 @@ return {
         { filter = { event = "msg_show", find = "yanked" }, opts = { skip = true } },
         { filter = { find = "No active Snippet" }, opts = { skip = true } },
         { filter = { find = "waiting for cargo metadata" }, opts = { skip = true } },
-        -- INFO: remove when deprecation warning is fixed
-        { filter = { find = "vim.lsp.util.get_progress_messages is deprecated" }, opts = { skip = true } },
-        { filter = { find = "function 'get_progress_messages'" }, opts = { skip = true } },
       },
       presets = {
         inc_rename = true,
