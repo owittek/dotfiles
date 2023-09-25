@@ -11,7 +11,6 @@ return {
   { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.completion.copilot-lua" },
-  { import = "astrocommunity.startup.fsplash-nvim" },
   { import = "astrocommunity.file-explorer.oil-nvim" },
   { import = "astrocommunity.git.git-blame-nvim" },
   { import = "astrocommunity.motion.vim-matchup" },
