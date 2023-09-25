@@ -102,7 +102,10 @@ return {
     opts = {
       messages = { enabled = true },
       cmdline = {
+        view = "cmdline",
         format = {
+          search_down = { view = "cmdline" },
+          search_up = { view = "cmdline" },
           filter = { pattern = "^:%s*!", icon = "$ ", ft = "sh" },
           IncRename = {
             pattern = "^:%s*IncRename%s+",
