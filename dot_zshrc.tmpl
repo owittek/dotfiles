@@ -65,6 +65,7 @@ export MAMBA_ROOT_PREFIX="$HOME/.micromamba"
 export XDG_CONFIG_HOME="$HOME/.config"
 export LDFLAGS="-L$HOMEBREW_PREFIX/opt/llvm/lib"
 export CPPFLAGS="-I$HOMEBREW_PREFIX/opt/llvm/include"
+export CMAKE_CXX_COMPILER_LAUNCHER="ccache"
 {{ else -}}
 
 export MAMBA_EXE="$HOME/.local/bin/micromamba"
@@ -78,6 +79,7 @@ export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"
 export BAT_THEME="Catppuccin-mocha"
 export BATDIFF_USE_DELTA=true
+export BOB_CONFIG="$XDG_CONFIG_HOME/bob/config.json"
 
 
 # Extend PATH.
