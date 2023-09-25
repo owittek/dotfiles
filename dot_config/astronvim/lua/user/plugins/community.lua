@@ -88,6 +88,17 @@ return {
   },
   {
     "noice.nvim",
+    dependencies = {
+      {
+        "rcarriga/nvim-notify",
+        opts = {
+          renderer = "wrapped-compact",
+          stages = "fade",
+          timeout = 500,
+          fps = 120,
+        },
+      },
+    },
     opts = {
       messages = { enabled = true },
       cmdline = {
