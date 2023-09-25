@@ -140,14 +140,15 @@ return {
           filter = { cmdline = "^:", min_height = 5 },
           -- BUG: will be fixed after https://github.com/neovim/neovim/issues/21044 gets merged
         },
+        { filter = { event = "msg_show", kind = "", find = "written" }, opts = { skip = true } },
+        { filter = { event = "msg_show", find = "go up one level" }, opts = { skip = true } },
         { filter = { event = "msg_show", kind = "search_count" }, opts = { skip = true } },
         { filter = { event = "msg_show", find = "; before #" }, opts = { skip = true } },
         { filter = { event = "msg_show", find = "; after #" }, opts = { skip = true } },
         { filter = { event = "msg_show", find = " lines, " }, opts = { skip = true } },
-        { filter = { event = "msg_show", find = "go up one level" }, opts = { skip = true } },
         { filter = { event = "msg_show", find = "yanked" }, opts = { skip = true } },
-        { filter = { find = "No active Snippet" }, opts = { skip = true } },
         { filter = { find = "waiting for cargo metadata" }, opts = { skip = true } },
+        { filter = { find = "No active Snippet" }, opts = { skip = true } },
       },
       presets = {
         inc_rename = true,
