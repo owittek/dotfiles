@@ -12,6 +12,7 @@ return {
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.startup.fsplash-nvim" },
+  { import = "astrocommunity.file-explorer.oil-nvim" },
   { import = "astrocommunity.git.git-blame-nvim" },
   { import = "astrocommunity.motion.vim-matchup" },
   { import = "astrocommunity.utility.noice-nvim" },
@@ -141,6 +142,12 @@ return {
         long_message_to_split = true,
         lsp_doc_border = "rounded",
       },
+    },
+  },
+  {
+    "stevearc/oil.nvim",
+    keys = {
+      { "<leader>e", "<cmd>Oil<cr>", desc = "Open Oil" },
     },
   },
 }
