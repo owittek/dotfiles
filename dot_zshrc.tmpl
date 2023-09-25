@@ -9,12 +9,6 @@ zstyle ':z4h:' auto-update-days '28'
 # Keyboard type: 'mac' or 'pc'.
 zstyle ':z4h:bindkey' keyboard {{ if eq .chezmoi.os "darwin" }} 'mac' {{ else }} 'pc' {{ end }}
 
-# Start tmux if not already in tmux.
-if [[ -z "$IN_TMUX" ]]; then
-    zstyle ':z4h:' start-tmux command tmux -u new -A -D -t main
-    export IN_TMUX=1
-fi
-
 # Whether to move prompt to the bottom when zsh starts and on Ctrl+L.
 zstyle ':z4h:' prompt-at-bottom 'no'
 
@@ -109,6 +103,14 @@ z4h source ~/code/work/everdocs/scripts/tools.sh
 
 cmd_exists() {
   command -v "$@" >/dev/null 2>&1
+}
+
+function zz() {
+    if cmd_exists tmux; then
+        tmux -u new -A -D -t main
+    else
+        echo "tmux not installed"
+    fi
 }
 
 __mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
