@@ -66,6 +66,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export LDFLAGS="-L$HOMEBREW_PREFIX/opt/llvm/lib"
 export CPPFLAGS="-I$HOMEBREW_PREFIX/opt/llvm/include"
 export CMAKE_CXX_COMPILER_LAUNCHER="ccache"
+export DYLD_INSERT_LIBRARIES="$HOMEBREW_PREFIX/opt/mimalloc/lib/libmimalloc.dylib"
 {{ else -}}
 
 export MAMBA_EXE="$HOME/.local/bin/micromamba"
